@@ -1,0 +1,7 @@
+{
+  "name": "jarvis-market-watches",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "dependencies": { "@vercel/blob": "^2.0.0" }
+}
