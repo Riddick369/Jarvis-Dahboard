@@ -12,7 +12,7 @@ Two Vercel functions run separate Forex and U.S. stocks research, ask AI Gateway
 
 ## What the agents can substantiate
 
-The Forex analyst uses recent EUR/USD and USD/JPY **daily** bars and public Fed/BLS headlines. No gold feed is configured, so it explicitly withholds gold levels. The stocks analyst ranks liquid U.S. names using the **previous session's** grouped aggregates and news. It does not verify S&P 500 membership or use live premarket quotes. Neither analyst can confirm an ICT entry from that evidence. Configure intraday and gold sources before enabling those conclusions.
+The Forex analyst uses recent EUR/USD and USD/JPY **daily** bars and public Fed/BLS headlines. Its ICT plan check names the user's Asia/London sweep, displacement, order block, FVG/inverted FVG, Fibonacci, invalidation, and target criteria, and labels chart-dependent items as unverified. No gold feed is configured, so it withholds gold levels. The stocks analyst ranks liquid U.S. names using the **previous session's** grouped aggregates and news. It does not verify S&P 500 membership or use live premarket quotes. Neither analyst can confirm an ICT entry from that evidence. Configure intraday and gold sources before enabling those conclusions.
 
 Vercel Hobby cron is UTC and may trigger anywhere within the scheduled hour. Two seasonal UTC triggers per analyst and a New York local-time gate handle daylight saving time; the 9 a.m. analyst skips weekends. The ChatGPT scheduled watches remain separate and are not mirrored here. No trades are placed.
 
