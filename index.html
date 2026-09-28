@@ -1,25 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jarvis Command Center</title>
-  <meta name="description" content="Jarvis market watch assignments and schedule">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis · Market Operations</title>
   <style>
-    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#e8edf6;background:#080d18}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% 0,#183654 0,transparent 35%),#080d18}header,main{max-width:1160px;margin:auto;padding:0 28px}header{display:flex;justify-content:space-between;align-items:center;padding-top:25px;padding-bottom:25px;border-bottom:1px solid #253247}.brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:750;letter-spacing:.09em}.mark{width:35px;height:35px;display:grid;place-items:center;border:1px solid #49c8ed;border-radius:10px;color:#68e2ff}.eyebrow{font-size:13px;color:#a9bacd;letter-spacing:.12em;text-transform:uppercase}main{padding-top:42px;padding-bottom:60px}h1{font-size:clamp(30px,5vw,48px);line-height:1.1;letter-spacing:-.035em;margin:10px 0 12px}p{color:#b4c2d3;line-height:1.55}main>p{max-width:650px;margin:0 0 35px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:#111b2b;border:1px solid #2a3a50;border-radius:18px;padding:27px;box-shadow:0 18px 50px #0002}.top{display:flex;align-items:center;justify-content:space-between;gap:16px}.badge{padding:7px 10px;border-radius:999px;font-size:13px;font-weight:650}.active{background:#173c37;color:#a4f1d2}.planned{background:#343024;color:#ffe0a1}.time{font-size:34px;font-weight:740;letter-spacing:-.04em;margin:24px 0 4px}.time span{font-size:15px;font-weight:450;color:#a9bacd;letter-spacing:0}h2{font-size:21px;margin:14px 0 8px}.card p{min-height:72px;margin:0}.label{font-size:13px;color:#91a7bf;text-transform:uppercase;letter-spacing:.1em;margin-top:25px}.scope{font-size:15px;color:#e2e9f3;margin-top:8px}.note{margin-top:25px;border-left:3px solid #4cc4e9;padding:5px 0 5px 16px;color:#aec3d5;font-size:14px;max-width:850px}.note strong{color:#e5eef8}@media(max-width:700px){header,main{padding-left:18px;padding-right:18px}.grid{grid-template-columns:1fr}.card{padding:22px}.card p{min-height:0}}
+    :root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#eaf2fa;background:#07101a}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% 0,#143c54,transparent 45%),#07101a}
+    header,main{max-width:1120px;margin:auto;padding:24px}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2c4858}
+    .brand{font-size:22px;font-weight:800;letter-spacing:.14em}.brand span{color:#61dafa}.tag{color:#a8bbc7;font-size:13px}
+    h1{font-size:clamp(32px,5vw,48px);margin:36px 0 10px}p{color:#aabeca;line-height:1.55}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px}
+    article{background:#101e2b;border:1px solid #2b4c5a;border-radius:17px;padding:24px;box-shadow:0 20px 55px #0004}
+    .head{display:flex;align-items:start;justify-content:space-between;gap:12px}h2{margin:0;font-size:22px}.pill{border:1px solid #457b8c;background:#153240;color:#9ce5e5;border-radius:20px;padding:6px 10px;font-size:12px;white-space:nowrap}
+    .schedule{font-size:14px;margin:14px 0 23px;color:#abcbd7}.report{white-space:pre-wrap;line-height:1.65;color:#e5edf4;font-size:15px}.meta{color:#9fb4c1;font-size:13px;margin:18px 0}.sources{padding-left:19px;line-height:1.6;font-size:13px}.sources a{color:#76d6f4}.note{border-left:3px solid #4cbcdc;padding-left:15px;margin-top:25px;font-size:14px;color:#b5c7d1}
+    button{border:1px solid #50a9c4;border-radius:9px;background:#133647;color:#e7f7fa;padding:9px 14px;cursor:pointer}button:hover{background:#215168}
+    @media(max-width:700px){header,main{padding:18px}.grid{grid-template-columns:1fr}.head{display:block}.pill{display:inline-block;margin-top:12px}}
   </style>
 </head>
 <body>
-  <header><div class="brand"><span class="mark" aria-hidden="true">J</span> JARVIS</div><span class="eyebrow">Command Center · Preview</span></header>
-  <main>
-    <div class="eyebrow">Market operations</div>
-    <h1>Agent assignments</h1>
-    <p>Two market watches with separate schedules and briefs.</p>
-    <section class="grid" aria-label="Market watch assignments">
-      <article class="card"><div class="top"><span class="eyebrow">Forex analyst</span><span class="badge active">Scheduled in ChatGPT</span></div><div class="time">7:00 AM <span>Eastern · daily</span></div><h2>Forex Macro Watch</h2><p>Check consequential macro developments and alert only when the outlook changes. Include intraday and daily or weekly support and resistance.</p><div class="label">Coverage</div><div class="scope">USD/JPY · EUR/USD · Gold (XAU/USD)</div></article>
-      <article class="card"><div class="top"><span class="eyebrow">Equities analyst</span><span class="badge active">Scheduled in ChatGPT</span></div><div class="time">9:00 AM <span>Eastern · weekdays</span></div><h2>Stocks &amp; indices watch</h2><p>Scan S&amp;P 500 constituents and Nasdaq-listed stocks with Rallies and current news. Surface consequential movers and catalysts, then check highlighted charts against the ICT plan when data supports it.</p><div class="label">Possible coverage</div><div class="scope">S&amp;P 500 constituents · Nasdaq-listed stocks</div></article>
-    </section>
-    <div class="note"><strong>Preview status:</strong> Both scheduled watches run in ChatGPT. This page does not yet read live task results or market prices; it is a dashboard preview, not an execution system.</div>
-  </main>
+<header><div class="brand"><span>J</span> JARVIS</div><div class="tag">MARKET OPERATIONS</div></header>
+<main>
+  <h1>Analyst reports</h1>
+  <p>Two scheduled Vercel analysts. Each card shows its latest saved report and the time it ran. ChatGPT alerts are separate.</p>
+  <button id="refresh" type="button">Refresh reports</button>
+  <div class="grid">
+    <article id="forex"><div class="head"><h2>Forex macro</h2><span class="pill">Checking status</span></div><div class="schedule">Target: 7:00 a.m. Eastern · daily</div><div class="report">Loading…</div><div class="meta"></div><ul class="sources"></ul></article>
+    <article id="stocks"><div class="head"><h2>Stocks and ICT watch</h2><span class="pill">Checking status</span></div><div class="schedule">Target: 9:00 a.m. Eastern · weekdays</div><div class="report">Loading…</div><div class="meta"></div><ul class="sources"></ul></article>
+  </div>
+  <p class="note">Vercel Hobby cron runs may occur during the scheduled hour. Reports use timestamped source data and are research only; they do not place trades.</p>
+</main>
+<script>
+const time = value => new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short',timeZone:'America/New_York'}).format(new Date(value)) + ' ET';
+function render(kind, report, configured){
+  const root=document.getElementById(kind), pill=root.querySelector('.pill'), body=root.querySelector('.report'), meta=root.querySelector('.meta'), list=root.querySelector('.sources');
+  list.replaceChildren();
+  if(!configured){ pill.textContent='Setup needed';body.textContent='Report storage is not connected yet.';meta.textContent='';return; }
+  if(!report){ pill.textContent='Waiting for first run';body.textContent='This analyst has not saved a report yet.';meta.textContent='';return; }
+  pill.textContent='Last run '+time(report.ranAt);
+  body.textContent=report.narrative;
+  meta.textContent=`Evidence gathered ${time(report.evidenceAt)}. ${report.limitations||''}`;
+  (report.sources||[]).forEach(source=>{try{const u=new URL(source.url);if(u.protocol!=='https:')return;const li=document.createElement('li'),a=document.createElement('a');a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=source.title||u.hostname;li.append(a);list.append(li)}catch{}});
+}
+async function refresh(){
+  try{const response=await fetch('/api/reports',{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);const data=await response.json();['forex','stocks'].forEach(kind=>render(kind,data.reports?.[kind],data.configured));}
+  catch{['forex','stocks'].forEach(kind=>{const root=document.getElementById(kind);root.querySelector('.pill').textContent='Unavailable';root.querySelector('.report').textContent='Could not load reports. Try refreshing later.'})}
+}
+document.getElementById('refresh').addEventListener('click',refresh);refresh();
+</script>
 </body>
 </html>
